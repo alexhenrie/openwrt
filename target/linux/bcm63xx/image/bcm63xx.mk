@@ -1085,6 +1085,17 @@ define Device/sky_sr102
 endef
 TARGET_DEVICES += sky_sr102
 
+### SmartRG ###
+define Device/smartrg_sr360n
+  $(Device/bcm63xx)
+  DEVICE_VENDOR := SmartRG
+  DEVICE_MODEL := SR360n
+  CFE_BOARD_ID := 96318REF
+  CHIP_ID := 6318
+  DEVICE_PACKAGES := $(B43_PACKAGES) $(USB2_PACKAGES) kmod-bcm63xx-udc
+endef
+TARGET_DEVICES += smartrg_sr360n
+
 ### T-Com ###
 define Device/t-com_speedport-w-303v
   $(Device/bcm63xx-legacy)
